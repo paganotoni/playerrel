@@ -1,0 +1,6 @@
+create_table("contact_infos", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("parent_name", "string", {})
+	t.Column("phone_number", "string", {})
+	t.Column("p_id", "uuid", {})
+})

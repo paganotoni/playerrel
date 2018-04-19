@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/paganotoni/app/actions"
+	"github.com/paganotoni/playerrel/actions"
 )
 
 // main is the starting point to your Buffalo application.

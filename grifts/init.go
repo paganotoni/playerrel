@@ -2,7 +2,7 @@ package grifts
 
 import (
 	"github.com/gobuffalo/buffalo"
-	"github.com/paganotoni/app/actions"
+	"github.com/paganotoni/playerrel/actions"
 )
 
 func init() {

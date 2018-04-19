@@ -10,7 +10,7 @@ import (
 	"github.com/gobuffalo/buffalo/middleware/csrf"
 	"github.com/gobuffalo/buffalo/middleware/i18n"
 	"github.com/gobuffalo/packr"
-	"github.com/paganotoni/app/models"
+	"github.com/paganotoni/playerrel/models"
 )
 
 // ENV is used to help switch settings based on where the
@@ -26,7 +26,7 @@ func App() *buffalo.App {
 	if app == nil {
 		app = buffalo.New(buffalo.Options{
 			Env:         ENV,
-			SessionName: "_app_session",
+			SessionName: "_playerrelsession",
 		})
 		// Automatically redirect to SSL
 		app.Use(forceSSL())
@@ -48,6 +48,7 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", HomeHandler)
+		app.GET("/create", CreateHandler)
 
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
